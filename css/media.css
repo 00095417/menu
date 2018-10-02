@@ -1,0 +1,12 @@
+@media (max-width: 720px){
+    .menu1{
+        position: absolute;
+        top: 4em;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+    }
+    .menu1 ul li{
+        display: block;
+    }
+}
