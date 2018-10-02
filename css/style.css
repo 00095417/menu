@@ -1,0 +1,97 @@
+.container{
+    display: grid;
+    grid-template-rows: 25%;
+}
+
+.menu1{
+    background-color: #a7e4df;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: initial;
+    font-size: 1em;
+    font-family: 'Oxygen Mono', Tahoma, Arial, sans-serif;
+}
+.menu1 ul , .menu1 li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu1 ul{
+    position: relative;
+    z-index: 597;
+    text-transform: uppercase;
+    justify-self: end;
+}
+.menu1 ul li{
+    float: left;
+    min-height: 1px;
+    vertical-align: middle;
+}
+.menu1 ul li.hover, .menu1 ul li:hover{
+    position: relative;
+    z-index: 599;
+    cursor: default;
+}
+.menu1 ul ul{
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    top: 100%;
+    left: 0;
+    z-index: 598;
+    width: 100%;
+    border-top: 4px solid #1b9bff;
+    text-transform: none;
+    min-width: 190px;
+    margin-top: 0;
+}
+.menu1 ul ul li{
+    float: none;
+    font-weight: normal;
+    position: relative;
+}
+.menu1::after, .menu1 ul::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.menu1 ul li:hover>ul{
+    visibility: visible;
+}
+.menu1 ul ul a{
+    background: #1b9bff;
+    color: #FFF;
+    border: 1px solid #0082e7;
+    border-top: 0 none;
+    line-height: 150%;
+    padding: 16px 20px;      
+}
+.menu1 a{
+    display: block;
+    line-height: 1em;
+    text-decoration: none;
+    background: #333;
+    color: #CBCBCB;
+    padding: 1em;
+}
+.menu1>ul{
+    *display: inline-block;
+}
+.menu1>ul>li>a{
+    line-height: 48px;
+}
+.menu1 ul ul li:first-child>a{
+    border-top: 1px solid #0082e7;
+}
+.menu1 ul ul li:last-child>a{
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 1px 0 #1b9bff;
+}
+.menu1 ul ul li:hover>a{
+    background: #35a6ff;
+    color: #f1424c;
+}
+.menu1 ul li:hover>a{
+    background: #b7b7b7;
+    color: #333;
+}
